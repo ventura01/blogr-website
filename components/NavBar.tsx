@@ -12,8 +12,11 @@ import BurgerIcon from "./icons/BurgerIcon";
 import CloseIcon from "./icons/CloseIcon";
 
 type Props = {};
+type ClassProps = {
+  styles: React.CSSProperties;
+};
 
-function classNames(...classes) {
+function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 const NavBar = (props: Props) => {
@@ -22,7 +25,7 @@ const NavBar = (props: Props) => {
     <nav className="flex justify-between py-8">
       <button
         onClick={() => setMenuOpen(!menuOpen)}
-        className="absolute md:hidden right-5"
+        className="absolute right-5 md:hidden"
       >
         {menuOpen ? (
           <CloseIcon width={24} height={24} color="#fff" />
@@ -41,11 +44,11 @@ const NavBar = (props: Props) => {
           />
         </div>
         <div
-          className={`${overpass.className} text-white text-sm hidden md:flex gap-x-10`}
+          className={`${overpass.className} hidden gap-x-10 text-sm text-white md:flex`}
         >
           <Menu as="div" className="relative inline-block text-left">
             <div>
-              <Menu.Button className="text-white inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold">
+              <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-white">
                 Product
                 <ChevronDownIcon
                   className="-mr-1 h-5 w-5 text-White"
@@ -163,7 +166,7 @@ const NavBar = (props: Props) => {
           </Menu>
           <Menu as="div" className="relative inline-block text-left">
             <div>
-              <Menu.Button className="text-white inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold">
+              <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-white">
                 Company
                 <ChevronDownIcon
                   className="-mr-1 h-5 w-5 text-White"
@@ -267,7 +270,7 @@ const NavBar = (props: Props) => {
 
           <Menu as="div" className="relative inline-block text-left">
             <div>
-              <Menu.Button className="text-white inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold">
+              <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-white">
                 Connect
                 <ChevronDownIcon
                   className="-mr-1 h-5 w-5 text-White"
@@ -356,12 +359,12 @@ const NavBar = (props: Props) => {
         </div>
       </div>
       <div
-        className={`${ubuntu.className} hidden text-white text-sm md:flex gap-x-10 mb-20`}
+        className={`${ubuntu.className} mb-20 hidden gap-x-10 text-sm text-white md:flex`}
       >
         <ActionBtn text="Log in" className="" />
         <ActionBtn
           text="Sign Up"
-          className="px-5 py-1 bg-transparent hover:bg-veryLightRed outline outline-1 outline-white text-white rounded-full active:bg-white active:text-lightRed"
+          className="rounded-full bg-transparent px-5 py-1 text-white outline outline-1 outline-white hover:bg-veryLightRed active:bg-white active:text-lightRed"
         />
       </div>
     </nav>
