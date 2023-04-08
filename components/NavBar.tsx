@@ -364,7 +364,7 @@ const NavBar = (props: Props) => {
           <div
             className={`${overpass.className} ${
               menuOpen
-                ? "absolute md:hidden left-20 top-14 flex flex-col gap-y-4 rounded-lg bg-white px-14 py-10 shadow"
+                ? "absolute left-20 top-14 flex flex-col gap-y-4 rounded-lg bg-white px-14 py-10 shadow md:hidden"
                 : "hidden"
             }`}
           >
@@ -675,11 +675,14 @@ const NavBar = (props: Props) => {
               </Transition>
             </Menu>
             <hr />
-            {/* <ActionBtn text="Log in" className="font-semibold text-veryDarkBlue" />
+            <ActionBtn
+              text="Log in"
+              className="font-semibold text-veryDarkBlue"
+            />
             <ActionBtn
               text="Sign Up"
-              className="rounded-full bg-transparent px-5 py-1 text-white outline outline-1 outline-white hover:bg-veryLightRed bg-gradient-to-r from-veryLightRed to-lightRed active:bg-white active:text-lightRed"
-            /> */}
+              className="rounded-full bg-transparent bg-gradient-to-r from-veryLightRed to-lightRed px-5 py-1 text-white outline outline-1 outline-white hover:bg-veryLightRed active:bg-white active:text-lightRed"
+            />
           </div>
         </div>
       </div>
