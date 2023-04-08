@@ -7,16 +7,18 @@ type Props = {};
 const MainSection = (props: Props) => {
   return (
     <main id="main" className="relative">
-      <div className={`${ubuntu.className} md:mb-40 container mx-auto max-w-screen-xl`}>
-        <h2 className="mb-16 text-center text-2xl font-bold text-veryDarkBlackBlue md:text-3xl">
+      <div
+        className={`${ubuntu.className} container mx-auto max-w-screen-xl md:mb-40`}
+      >
+        <h2 className="mb-16 text-center text-2xl font-bold text-veryDarkBlue md:text-3xl">
           Designed for the future
         </h2>
         <div className="mb-40 grid grid-cols-1 md:mb-0 md:grid-cols-2">
           <div className="row-start-2 row-end-3 px-5 py-20 md:row-start-1 md:row-end-2 md:py-36 ">
-            <h3 className="mb-4 text-xl font-semibold text-veryDarkBlackBlue">
+            <h3 className="mb-4 text-xl font-semibold text-veryDarkBlue">
               Introducing an extensible editor
             </h3>
-            <p className="mb-10 text-sm font-light text-veryDarkDesaturatedBlue">
+            <p className="mb-10 text-sm font-light text-veryDarkBlue">
               Blogr features an exceedingly intuitive interface which lets you
               focus on one thing: creating content. The editor supports
               management of multiple blogs and allows easy manipulation of
@@ -24,7 +26,7 @@ const MainSection = (props: Props) => {
               plugins and themes provide easy ways to add functionality or
               change the looks of a blog.
             </p>
-            <h3 className="mb-4 text-xl font-semibold text-veryDarkBlackBlue">
+            <h3 className="mb-4 text-xl font-semibold text-veryDarkBlue">
               Robust content management
             </h3>
             <p className="text-sm font-light text-veryDarkDesaturatedBlue">
@@ -46,7 +48,7 @@ const MainSection = (props: Props) => {
         </div>
       </div>
       {/* ELEMENTO MEDIO */}
-      <div className="bottom-[520px] mb-20 grid grid-cols-1 overflow-hidden rounded-bl-[96px] rounded-tr-[96px] bg-veryDarkBlue md:mb-48 md:grid-cols-2">
+      <div className="bottom-[520px] mb-20 grid grid-cols-1 overflow-hidden rounded-bl-[75px] rounded-tr-[75px] bg-veryDarkBlue md:mb-48 md:grid-cols-2">
         <div className="relative h-full w-full bg-cover">
           <Image
             src="/images/bg-pattern-circles.svg"
@@ -62,10 +64,10 @@ const MainSection = (props: Props) => {
             alt="phones"
             width={600}
             height={600}
-            className="absolute -mt-48 md:left-[180px] md:top-[850px] object-cover object-center"
+            className="absolute -mt-48 object-cover object-center md:left-[180px] md:top-[850px]"
           />
         </div>
-        <div className="px-8 pb-20 pt-48 md:py-20 md:col-start-2 md:col-end-3 md:pr-96">
+        <div className="px-8 pb-20 pt-48 md:col-start-2 md:col-end-3 md:py-20 md:pr-96">
           {/* <h3 className="mb-4 hidden text-xl font-semibold text-White md:block">
             Free, open, simple
           </h3>
@@ -101,10 +103,10 @@ const MainSection = (props: Props) => {
             />
           </div>
           <div className="px-5 md:py-12 md:pr-36">
-            <h3 className="mb-4 text-xl font-semibold text-veryDarkBlackBlue">
+            <h3 className="mb-4 text-xl font-semibold text-veryDarkBlue">
               Free, open, simple
             </h3>
-            <p className="mb-10 text-sm font-light text-veryDarkDesaturatedBlue">
+            <p className="mb-10 text-sm font-light text-veryDarkBlue">
               Blogr is a free and open source application backed by a large
               community of helpful developers. It supports features such as code
               syntax highlighting, RSS feeds, social media integration,
@@ -112,10 +114,10 @@ const MainSection = (props: Props) => {
               Analytics. The architecture is clean and is relatively easy to
               learn.
             </p>
-            <h3 className="mb-4 text-xl font-semibold text-veryDarkBlackBlue">
+            <h3 className="mb-4 text-xl font-semibold text-veryDarkBlue">
               Powerful tooling
             </h3>
-            <p className="text-sm font-light text-veryDarkDesaturatedBlue">
+            <p className="text-sm font-light text-veryDarkBlue">
               Batteries included. We built a simple and straightforward CLI tool
               that makes customization and deployment a breeze, but capable of
               producing even the most complicated sites.
